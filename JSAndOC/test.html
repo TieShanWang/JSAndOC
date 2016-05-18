@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试IOS与JS之前的互调</title>
+	<style type="text/css">
+	  * {
+	  	font-size: 40px;
+	  }
+	</style>
+  <script type="text/javascript">
+
+
+  
+  var jsParamFunc = function(argument) {
+    document.getElementById('jsParamFuncSpan').innerHTML
+    = argument['name'];
+  }
+  
+  var changeColor= function(color){
+      document.bgColor = color;
+  }
+  
+  function back(argument){
+      return argument;
+  }
+
+  </script>
+  
+</head>
+
+<body>ƒoc
+  
+<div style="margin-top: 100px">
+	<h1>JS Call OC</h1>
+    <input type="button" value="Call OC to alert" onclick="OCModel.alertWithMessageBtnTitle('This is title','This is message','OK')">
+</div>
+
+
+<div>
+	<span id="jsParamFuncSpan" style="color: red; font-size: 50px;"></span>
+</div>
+
+
+</body>
+</html>
